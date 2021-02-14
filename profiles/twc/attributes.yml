@@ -1,0 +1,133 @@
+ami_id:
+  sensitive: false
+  type: string
+  value: ami-09d95fab7fff3776c
+associate_public_ip:
+  sensitive: false
+  type: bool
+  value: true
+eip_instance:
+  sensitive: false
+  type: string
+  value: i-007478b1348a7f5d9
+instance_profile:
+  sensitive: false
+  type: string
+  value: ""
+instance_type:
+  sensitive: false
+  type: string
+  value: t2.micro
+key_name:
+  sensitive: false
+  type: string
+  value: MyKP
+private_ip:
+  sensitive: false
+  type: string
+  value: 172.31.86.26
+public_ip:
+  sensitive: false
+  type: string
+  value: 50.17.121.54
+root_is_encrypted:
+  sensitive: false
+  type: bool
+  value: true
+root_volume_size:
+  sensitive: false
+  type: number
+  value: 8
+root_volume_type:
+  sensitive: false
+  type: string
+  value: gp2
+security_group_id:
+  sensitive: false
+  type: string
+  value: sg-0522dad711dba864a
+security_group_ingress:
+  sensitive: false
+  type:
+    - set
+    - - object
+      - cidr_blocks:
+          - list
+          - string
+        description: string
+        from_port: number
+        ipv6_cidr_blocks:
+          - list
+          - string
+        prefix_list_ids:
+          - list
+          - string
+        protocol: string
+        security_groups:
+          - set
+          - string
+        self: bool
+        to_port: number
+  value:
+    - cidr_blocks:
+        - 0.0.0.0/0
+      description: HTTP
+      from_port: 80
+      ipv6_cidr_blocks:
+        - ::/0
+      prefix_list_ids: []
+      protocol: tcp
+      security_groups: []
+      self: false
+      to_port: 80
+    - cidr_blocks:
+        - 0.0.0.0/0
+      description: SSH
+      from_port: 22
+      ipv6_cidr_blocks:
+        - ::/0
+      prefix_list_ids: []
+      protocol: tcp
+      security_groups: []
+      self: false
+      to_port: 22
+security_group_name:
+  sensitive: false
+  type: string
+  value: WebServerSG
+security_group_tags:
+  sensitive: false
+  type:
+    - map
+    - string
+  value:
+    Name: WebServerSG
+security_group_vpc_id:
+  sensitive: false
+  type: string
+  value: vpc-b2d194c8
+security_groups:
+  sensitive: false
+  type:
+    - set
+    - string
+  value:
+    - sg-0522dad711dba864a
+source_destination_check:
+  sensitive: false
+  type: bool
+  value: true
+subnet_id:
+  sensitive: false
+  type: string
+  value: subnet-d92b1cf7
+tags:
+  sensitive: false
+  type:
+    - map
+    - string
+  value: {}
+volume_id:
+  sensitive: false
+  type: string
+  value: vol-0b3c30111a73f7e45
